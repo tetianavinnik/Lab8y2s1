@@ -5,7 +5,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ua.ucu.edu.apps.demo.flower.Flower;
 import ua.ucu.edu.apps.demo.flower.FlowerBucket;
-import ua.ucu.edu.apps.demo.flower.FlowerColor;
 import ua.ucu.edu.apps.demo.flower.FlowerPack;
 import ua.ucu.edu.apps.demo.order.Order;
 import ua.ucu.edu.apps.demo.payment.PayPalPaymentStrategy;
@@ -15,7 +14,7 @@ import ua.ucu.edu.apps.demo.payment.Payment;
 public class PostDeliveryStrategyController {
     @GetMapping
     public String getDelivery() {
-        Flower item = new Flower(1,12.5, "red", 12);
+        Flower item = new Flower(1, 12.5, "red", 12);
         FlowerBucket flowerBucket = new FlowerBucket();
         FlowerPack flowerPack = new FlowerPack(item, 12);
         flowerBucket.add(flowerPack);
